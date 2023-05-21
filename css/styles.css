@@ -702,5 +702,5 @@ button:focus {
 
 .modal-close-btn:hover .modal-close-btn-icon,
 .modal-close-btn:focus .modal-close-btn-icon {
-  fill: var(--light-mode-background-color);
+  fill: var(--page-background-color);
 }
