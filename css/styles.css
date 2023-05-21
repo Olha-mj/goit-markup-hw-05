@@ -146,8 +146,9 @@ button:focus {
   background-color: var(--pressed-state-color);
   opacity: 0;
   position: absolute;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
+  border-radius: 2px;
 
   transition: opacity 250ms var(--time-function);
 }
@@ -160,6 +161,7 @@ button:focus {
 .menu-item {
   padding-top: 24px;
   padding-bottom: 24px;
+  color: var(--pressed-state-color);
 }
 
 .contact-info {
@@ -181,7 +183,9 @@ button:focus {
   font-style: normal;
   font-weight: 400;
   color: var(--body-text-color);
+}
 
+.contact-link {
   transition: color 250ms var(--time-function);
 }
 
@@ -407,7 +411,7 @@ button:focus {
   border: 1px solid var(--helper-text-color);
 
   transition: color 250ms var(--time-function),
-    border 250ms var(--time-function);
+    border-color 250ms var(--time-function);
 }
 .customers-list-item {
   width: calc((100% - 120px) / 6);
@@ -417,7 +421,7 @@ button:focus {
 .customers-list-link:hover,
 .customers-list-link:focus {
   color: var(--pressed-state-color);
-  border: 1px solid var(--pressed-state-color);
+  border-color: var(--pressed-state-color);
 }
 
 /* ---------------Footer--------------- */
@@ -505,9 +509,10 @@ button:focus {
 .filter-button:focus {
   cursor: pointer;
   color: var(--page-background-color);
-  border: 1px solid transparent;
+  border-color: transparent;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  background-color: var(--pressed-state-color);
 }
 
 .filter-button {
@@ -524,7 +529,9 @@ button:focus {
   box-shadow: none;
 
   transition: color 250ms var(--time-function),
-    box-shadow 250ms var(--time-function);
+    box-shadow 250ms var(--time-function),
+    border-color 250ms var(--time-function),
+    background-color 250ms var(--time-function);
 }
 
 /* ------Cards Section----- */
@@ -540,6 +547,9 @@ button:focus {
 
 .project-link {
   display: block;
+  box-shadow: none;
+
+  transition: box-shadow 250ms var(--time-function);
 }
 
 .project-link:hover,
@@ -597,6 +607,8 @@ button:focus {
   background-color: var(--pressed-state-color);
 }
 
+/* Overlay */
+
 .overlay {
   position: absolute;
   left: 0;
@@ -649,11 +661,13 @@ button:focus {
   left: 50%;
   transform: translate(-50%, -50%);
   width: 408px;
-  height: 584px;
+  min-height: 576px;
   background-color: var(--modal-background-color);
   border-radius: 4px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+
+  transition: transform 250ms var(--time-function);
 }
 
 .modal-close-btn {
