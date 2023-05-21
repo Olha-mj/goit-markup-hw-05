@@ -170,20 +170,16 @@ button:focus {
   gap: 40px;
 }
 
-.contact-mail,
-.contact-tel {
+.contact-link {
   color: var(--body-text-color);
   font-weight: 400;
+  transition: color 250ms var(--time-function);
 }
 
 .contact-item {
   font-style: normal;
   font-weight: 400;
   color: var(--body-text-color);
-}
-
-.contact-link {
-  transition: color 250ms var(--time-function);
 }
 
 /* ----------------Hero Section---------------- */
