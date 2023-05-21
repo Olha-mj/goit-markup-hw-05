@@ -691,11 +691,16 @@ button:focus {
 .modal-close-btn:hover,
 .modal-close-btn:focus {
   border: none;
-  background-color: var(--page-background-color);
+  background-color: var(--pressed-state-color);
 }
 
 .modal-close-btn-icon {
   fill: var(--hero-color);
 
   transition: fill 250ms var(--time-function);
+}
+
+.modal-close-btn:hover .modal-close-btn-icon,
+.modal-close-btn:focus .modal-close-btn-icon {
+  fill: var(--light-mode-background-color);
 }
