@@ -49,9 +49,6 @@ button:hover,
 button:focus {
   background-color: var(--pressed-state-color);
 }
-/* button {
-  cursor: pointer;
-} */
 
 .list {
   list-style: none;
@@ -130,7 +127,7 @@ button:focus {
 
 .menu-link {
   font-weight: 500;
-  color: var(--hero-color);
+  color: var(--pressed-state-color);
   padding-top: 24px;
   padding-bottom: 24px;
 
@@ -410,8 +407,8 @@ button:focus {
   color: var(--helper-text-color);
   border: 1px solid var(--helper-text-color);
 
-  transition: color 250ms var(--time-function),
-    border-color 250ms var(--time-function);
+  transition: border-color 250ms var(--time-function),
+    color 250ms var(--time-function);
 }
 .customers-list-item {
   width: calc((100% - 120px) / 6);
@@ -686,7 +683,19 @@ button:focus {
   border-radius: 50%;
   padding: 0;
   cursor: pointer;
+
+  transition: background-color 250ms var(--time-function),
+    border 250ms var(--time-function);
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  border: none;
+  background-color: var(--page-background-color);
 }
 
 .modal-close-btn-icon {
+  fill: var(--hero-color);
+
+  transition: fill 250ms var(--time-function);
 }
